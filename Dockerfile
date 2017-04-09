@@ -13,6 +13,7 @@ RUN apt-get -qq update \
   && rm -rf /var/lib/{apt,dpkg,cache,log}/
 
 ADD entrypoint.sh .
+RUN chmod +x /entrypoint.sh
 CMD ["/entrypoint.sh"]
 
 LABEL org.freenas.interactive="false"                             \
