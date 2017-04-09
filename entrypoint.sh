@@ -10,7 +10,7 @@ fi
 
 listing=`find $MEDIA_CONV -name "*.mkv"`
 
-for $mkv in $listing
+for mkv in $listing
 do
   echo "Converting $mkv"
   noext=`echo $mkv | sed -e 's/\(.mkv\)*$//g'`
